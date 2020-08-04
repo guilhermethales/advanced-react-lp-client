@@ -1,4 +1,9 @@
-import { Head } from 'next/document'
+export type TechIcon = {
+  icon: {
+    url: string
+  }
+  title: string
+}
 
 export type LogoProps = {
   alternativeText: string
@@ -27,8 +32,14 @@ export type SectionAboutProjectProps = {
   }
 }
 
+export type SectionTechProps = {
+  title: string
+  techIcons: TechIcon[]
+}
+
 export type LandingPageProps = {
   logo: LogoProps
   header: HeaderProps
   sectionAboutProject: SectionAboutProjectProps
+  sectionTech: SectionTechProps
 }
